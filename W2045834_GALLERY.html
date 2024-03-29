@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life on Land</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ace5b5; /*  green background */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    color: #008000; /* Dark green text */
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  .gallery {
+    max-width: 800px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  .thumbnail {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .thumbnail:hover img {
+    transform: scale(1.1);
+  }
+  .expanded-view {
+    display: none;
+    position: fixed;
+    top: 50%; /* Positioning it at the center vertically */
+    left: 50%; /* Positioning it at the center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    width: 80%; /* Adjust the width  */
+    max-height: 80%; /* Adjust the max height  */
+    background-color: rgba(159, 198, 162, 0.918);
+    z-index: 999;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #000000; /* Black text */
+    overflow-y: auto;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .expanded-view.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+  .expanded-content {
+    max-width: 50%; /* Adjust the max width */
+    text-align: center;
+    color: #000000; /* Black text */
+  }
+  .expanded-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #000000;
+    font-size: 24px;
+    z-index: 1000;
+  }
+</style>
+</head>
+<body>
+
+<h1>Life on Land</h1>
+
+<div class="gallery">
+  <!-- Image 1 -->
+  <div class="thumbnail" onclick="expandImage('TARGET 15.1', 'By 2020, guarantee the preservation, revival, and responsible utilization of terrestrial and freshwater ecosystems, notably forests, wetlands, mountains, and arid areas, aligning with commitments made in international accords..', 'https://www.eopugetsound.org/sites/default/files/topical_article/images/Markworth.JPG')">
+    <img src="https://www.eopugetsound.org/sites/default/files/topical_article/images/Markworth.JPG" alt="Image 1">
+  </div>
+  <!-- Image 2 -->
+  <div class="thumbnail" onclick="expandImage('TARGET 15.2 ', 'By 2020, advocate for the adoption of sustainable forest management practices across all forest types, cease deforestation activities, rehabilitate degraded forests, and significantly boost global efforts in afforestation and reforestation..', 'https://www.iucn.org/sites/default/files/2022-04/deforestation_in_myanmar.jpg')">
+    <img src="https://www.iucn.org/sites/default/files/2022-04/deforestation_in_myanmar.jpg" alt="Image 2">
+  </div>
+  <!-- Image 3 -->
+  <div class="thumbnail" onclick="expandImage('TARGET 15.3', 'By 2030, tackle desertification, rehabilitate deteriorated land and soil, encompassing areas impacted by desertification, drought, and floods, and endeavor to attain a world where land degradation is balanced out..', 'https://www.afrik21.africa/wp-content/uploads/2023/06/FEMME-1-800x400.jpg')">
+    <img src="https://www.afrik21.africa/wp-content/uploads/2023/06/FEMME-1-800x400.jpg" alt="Image 3">
+  </div>
+  <!-- Image 4 -->
+  <div class="thumbnail" onclick="expandImage('TARGET 15.4', 'By 2030, secure the preservation of mountain ecosystems, including their biodiversity, to bolster their ability to furnish indispensable benefits crucial for sustainable development..', 'https://www.iucn.org/sites/default/files/2022-10/mountains.jpg')">
+    <img src="https://www.iucn.org/sites/default/files/2022-10/mountains.jpg" alt="Image 4">
+  </div>
+  <!-- Image 5 -->
+  <div class="thumbnail" onclick="expandImage('TARGET 15.5', 'Implement immediate and substantial measures to diminish the deterioration of natural habitats, cease the decline of biodiversity, and safeguard endangered species, preventing their extinction by 2020..', 'https://www.nrdc.org/sites/default/files/styles/medium_16x9_200/public/media-uploads/50218546542_55e4b3ae21_o_2400.jpg.webp?h=c3635fa2&itok=GqAaSWP4')">
+    <img src="https://www.nrdc.org/sites/default/files/styles/medium_16x9_200/public/media-uploads/50218546542_55e4b3ae21_o_2400.jpg.webp?h=c3635fa2&itok=GqAaSWP4" alt="Image 5">
+  </div>
+  <!-- Image 6 -->
+  <div class="thumbnail" onclick="expandImage('TARGET 15.6', 'Advocate for equitable distribution of benefits derived from the utilization of genetic resources and facilitate proper access to these resources in accordance with international agreements..', 'https://www.genres.de/fileadmin/SITE_MASTER/content/Bilder/ABS_Kr%C3%A%BCuter-traditionell_Fotolia92068938nilanewsom_464px.jpg')">
+    <img src="https://www.genres.de/fileadmin/SITE_MASTER/content/Bilder/ABS_Kr%C3%A4uter-traditionell_Fotolia92068938nilanewsom_464px.jpg" alt="Image 6">
+  </div>
+</div>
+
+<div class="expanded-view" id="expandedView">
+  <span class="close-button" onclick="closeExpandedView()">&times;</span>
+  <div class="expanded-content" id="expandedContent"></div>
+</div>
+
+<script>
+  function expandImage(title, description, imagePath) {
+    var expandedView = document.getElementById('expandedView');
+    var expandedContent = document.getElementById('expandedContent');
+
+    expandedContent.innerHTML = '<img src="' + imagePath + '" alt="' + title + '">';
+    expandedContent.innerHTML += '<h2>' + title + '</h2>';
+    expandedContent.innerHTML += '<p>' + description + '</p>';
+
+    expandedView.style.display = 'flex';
+    setTimeout(function () {
+      expandedView.classList.add('active');
+    }, 50); // Delay adding 'active' class to allow transition effect
+  }
+
+  function closeExpandedView() {
+    var expandedView = document.getElementById('expandedView');
+    expandedView.classList.remove('active');
+    setTimeout(function () {
+      expandedView.style.display = 'none';
+    }, 300); // Delay hiding the view to allow transition effect
+  }
+</script>
+
+<!-- Customization Options -->
+<div>
+  <label for="color">Choose page color:</label>
+  <input type="color" id="color" name="color" onchange="document.body.style.backgroundColor = this.value;">
+</div>
+
+<div>
+  <label for="font">Choose font style:</label>
+  <select id="font" name="font" onchange="document.body.style.fontFamily = this.value;">
+    <option value="Arial, sans-serif">Arial</option>
+    <option value="Times New Roman, serif">Times New Roman</option>
+    <option value="Verdana, sans-serif">Verdana</option>
+    <option value="Courier New, monospace">Courier New</option>
+  </select>
+</div>
+
+</body>
+</html>
+
+
