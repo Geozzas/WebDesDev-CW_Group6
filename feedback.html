@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Life On Land Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form {
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .formBox {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(36, 67, 40, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a class="active" href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+    <h1>Feedback Form</h1>
+    <div class="formBox">
+        <form>
+            <label for="userName">Name: </label>
+            <input type="text" name="userName" id="userName" required>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+            <label>Was this your first visit?</label>
+            <div>
+                <input type="radio" name="firstVisit" id="yes" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="firstVisit" id="no" value="no">
+                <label for="no">No</label>
+            </div>
+            <label>Was this website informative and easy to navigate through?</label>
+            <div>
+                <input type="radio" name="feedback1" id="yes" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="feedback1" id="no" value="no">
+                <label for="no">No</label>
+            </div>
+            <label for="ifNo">If "No", let us know what we can improve on!</label>
+            <textarea name="ifNo" id="ifNo" rows="5" cols="20"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+<br>
+<br>
+<br>
+<footer class="footer">
+
+</footer>
+<br>
+
+</html>
