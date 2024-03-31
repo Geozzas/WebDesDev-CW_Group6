@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    font-family: Courier, 'Courier New', monospace;
+    font-family: Arial, sans-serif;
     font-size: 100%;
     background: linear-gradient(to top, #89bd87 0%, #d0e2cf 100%);
     color: #090f08;
@@ -54,14 +54,11 @@ nav {
 }
 
 .navbar a {
-    font-family: courier, monospace;
+    font-family: Arial, sans-serif;
     color: #deecdd;  /* Colour of navbar words */
     text-decoration: none;
     text-align: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-right: 12px; 
-    padding-left: 12px;
+    padding: 16px 12px;
     margin: 3px;
     display: flex;
 }
