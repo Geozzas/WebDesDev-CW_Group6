@@ -1,0 +1,244 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Life On Land Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form {
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .formBox {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            width: 600px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+            font-weight: 500;
+        }
+
+        .formBox input {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #777777;
+            margin-bottom: 20px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .formBox input[type='radio'] {
+            width: 100%;
+            margin: 0;
+        }
+
+        .radio-group {
+            display: flex;
+            margin-bottom: 50px;
+            justify-content: space-around;
+        }
+
+        .radio-inline {
+            margin: 0px 50px;
+            cursor: pointer;
+        }
+
+        .radio-top {
+            float: left;
+            padding: 0;
+            text-align: center;
+            display: inline;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        textarea {
+            width: 90%;
+            padding: 10px;
+            border: 2px solid #777777;
+            box-sizing: border-box;
+            margin: 0 0 20px;
+        }
+
+        .bttn {
+            border: none;
+            cursor: pointer;
+            background-color: #152414;
+            color: #e3eee2;
+            font-size: 16px;
+            width: 50%;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .bttn:hover {
+            background-color: #334f33;
+            color: #e3eee2;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a class="active" href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+    <h1>Welcome to our Feedback Form!</h1>
+    <h4> * Required fields</h6>
+        <div class="formBox">
+            <form action="mailto:w2006868@westminster.ac.uk" method="post" enctype="text/plain"
+                onSubmit="let the_result = validateEmail(userEmail); return the_result;">
+                <label for="userName">* Name: </label>
+                <input type="text" name="userName" id="userName" placeholder="Your Full Name" required>
+
+                <label for="userEmail">* Email: </label>
+                <input type="email" name="userEmail" id="userEmail" placeholder="Your Email Address">
+                <br>
+                <br>
+                <label>* 1. Was this your first time visiting us?</label>
+                <div class="radio-group">
+                    <label class="radio-inline" for="yes">Yes</label>
+                    <input type="radio" name="firstVisit" id="yes" value="Yes" required>
+                    <label class="radio-inline" for="no">No</label>
+                    <input type="radio" name="firstVisit" id="no" value="No">
+                </div>
+                <br>
+                <label>* 2. Was it easy to navigate through the website?</label>
+                <div class="radio-group">
+                    <label class="radio-inline" for="yes">Yes</label>
+                    <input type="radio" name="easy" id="yes" value="Yes" required>
+                    <label class="radio-inline" for="no">No</label>
+                    <input type="radio" name="easy" id="no" value="No">
+                </div>
+                <label for="ifNo">If "No", let us know why so that we can improve our website!</label>
+                <textarea name="ifNo" id="ifNo" rows="5" cols="20"
+                    placeholder="Add your improvements here..."></textarea>
+                <br>
+                <br>
+                <label>* 3. How satisfied are you with our services?</label>
+                <label>1 - Not satisfied at all, 10 - Very satisfied</label>
+                <div class="radio-group">
+                    <label class="radio-top" for="1">1<br>
+                        <input type="radio" name="satisfactionLevel" id="1" value="1" required></label>
+                    <label class="radio-top" for="2">2<br>
+                        <input type="radio" name="satisfactionLevel" id="2" value="2"></label>
+                    <label class="radio-top" for="3">3<br>
+                        <input type="radio" name="satisfactionLevel" id="3" value="3"></label>
+                    <label class="radio-top" for="4">4<br>
+                        <input type="radio" name="satisfactionLevel" id="4" value="4"></label>
+                    <label class="radio-top" for="5">5<br>
+                        <input type="radio" name="satisfactionLevel" id="5" value="5"></label>
+                    <label class="radio-top" for="6">6<br>
+                        <input type="radio" name="satisfactionLevel" id="6" value="6"></label>
+                    <label class="radio-top" for="7">7<br>
+                        <input type="radio" name="satisfactionLevel" id="7" value="7"></label>
+                    <label class="radio-top" for="8">8<br>
+                        <input type="radio" name="satisfactionLevel" id="8" value="8"></label>
+                    <label class="radio-top" for="9">9<br>
+                        <input type="radio" name="satisfactionLevel" id="9" value="9"></label>
+                    <label class="radio-top" for="10">10<br>
+                        <input type="radio" name="satisfactionLevel" id="10" value="10"></label>
+                </div>
+                <br>
+                <label>* 4. How likely would you return to our website?</label>
+                <div class="radio-group">
+                    <label class="radio-inline" for="veryUnlikely">Very Unlikely</label><br>
+                    <input type="radio" name="returnLikely" id="veryUnlikely" value="Very Unlikely" required>
+
+                    <input type="radio" name="returnLikely" id="Unlikely" value="Unlikely">
+
+                    <input type="radio" name="returnLikely" id="Neutral" value="Neutral">
+
+                    <input type="radio" name="returnLikely" id="Likely" value="Likely">
+
+                    <input type="radio" name="returnLikely" id="veryLikely" value="Very Likely">
+                    <label class="radio-inline" for="veryLikely">Very Likely</label><br>
+                </div>
+                <br>
+                <label>* 5. How likely would you recommend our services?</label>
+                <div class="radio-group">
+                    <label class="radio-inline" for="veryUnlikely">Very Unlikely</label><br>
+                    <input type="radio" name="recommendLikely" id="veryUnlikely" value="Very Unlikely" required>
+
+                    <input type="radio" name="recommendLikely" id="Unlikely" value="Unlikely">
+
+                    <input type="radio" name="recommendLikely" id="Neutral" value="Neutral">
+
+                    <input type="radio" name="recommendLikely" id="Likely" value="Likely">
+
+                    <input type="radio" name="recommendLikely" id="veryLikely" value="Very Likely">
+                    <label class="radio-inline" for="veryLikely">Very Likely</label><br>
+                </div>
+                <br>
+                <label for="addComment">Feel free to provide any additional comments or suggestions!</label>
+                <textarea name="addComment" id="addComment" rows="5" cols="20"
+                    placeholder="Add your message here..."></textarea>
+
+                <button type="button" class="bttn" onclick="preview(this.form)">Preview feedback</button>
+                <button type="reset" class="bttn" value="Reset">Reset feedback</button>
+                <button type="submit" class="bttn">Submit your feedback</button>
+            </form>
+        </div>
+        <script>
+            function getuserName(userName) {
+                return userName.value;
+            }
+
+            function getuserEmail(userEmail) {
+                return userEmail.value;
+            }
+
+            function getRadioValue(radioArray) {
+                for (let i = 0; i < radioArray.length; i++) {
+                    if (radioArray[i].checked) {
+                        return radioArray[i].value;
+                    }
+                }
+                return "";
+            }
+
+            function getText(comment) {
+                return comment.value;
+            }
+
+            function preview(form) {
+                alert(
+                    "* Required" + "\n" +
+                    "* Name: " + getuserName(userName) + "\n" +
+                    "* Email: " + getuserEmail(userEmail) + "\n" +
+                    "* 1. First visit: " + getRadioValue(form.firstVisit) + "\n" +
+                    "* 2. Easy to navigate the site: " + getRadioValue(form.easy) + "\n" +
+                    "Improvement suggestions: " + getText(form.ifNo) + "\n" +
+                    "* 3. Satisfaction rating out of 10: " + getRadioValue(form.satisfactionLevel) + "\n" +
+                    "* 4. Return likelihood: " + getRadioValue(form.returnLikely) + "\n" +
+                    "* 5. Recommendation likelihood: " + getRadioValue(form.recommendLikely) + "\n" +
+                    "Additional comments: " + getText(form.addComment)
+                );
+            }
+
+        </script>
+</body>
+<br>
+<br>
+<br>
+<footer class="footer">
+
+</footer>
+<br>
+
+</html>
