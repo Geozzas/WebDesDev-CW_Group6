@@ -1,6 +1,6 @@
 body {
-    margin: 0px;
-    font-family: Courier, 'Courier New', monospace;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 100%;
     background: linear-gradient(to top, #266b39 0%, #d0e2cf 100%);
     color: #090f08;
@@ -24,8 +24,15 @@ h2 {
     padding-bottom: 30px;
 }
 
+h3 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 5%;
+    padding-bottom: 30px;
+}
+
 p {
-    margin: auto 25%;
+    margin: 30px 25%;
     text-align: justify;
     font-size: 1.125em;
     padding-bottom: 10px;
@@ -60,7 +67,6 @@ p {
     margin: 0;
     background: linear-gradient(to top, #cddecc, #2b4929);
     /* Colour of the navbar */
-    opacity: 80%;
     overflow: hidden;
 }
 
@@ -69,7 +75,6 @@ p {
 }
 
 .navbar a {
-    font-family: Courier, 'Courier New', monospace;
     font-size: 18px;
     color: white;
     /* Colour of navbar words */
