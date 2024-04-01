@@ -6,12 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Splash Screen</title>
 </head>
+<style>
+    .splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #8FBC8F;
+        z-index: 200;
+        color: white;
+        text-align: center;
+        line-height: 1.5; /* Adjusted line-height for better text spacing */
+    }
+    .splash {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; /* Center-align text */
+    }
+    .splash h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0; /* Remove margin */
+    }
+    
+    .splash .student-info {
+        font-size: 16px;
+        margin: 5px 0; /* Adjust margin for spacing */
+    }
+    
+    
+    .splash.display-none {
+        display: none;
+    }
+    ul {
+        list-style-type: none; /* Remove default bullet points */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+    
+    .student-info {
+        font-size: 20px;
+        color: white;
+        margin-top: 20px; /* Added margin-top for spacing */
+        text-align: center;
+    }
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 2s ease-in forwards;
+    }    
+</style>
 <body>
 
     <div class="splash">
-        <h1 class="fade-in">Welcome!</h1>
+        <h1 class="fade-in">Living Planet</h1>
+        <ul>
+        <li class="student-info">Maryam = Student 1</li>
+        <li class="student-info">Georgia = Student 2</li>
+        <li class="student-info">Bernard = Student 3</li>
+        <li class="student-info">Subhan = Student 4</li>
+    </ul>
     </div>
-
+    
     <script src="app.js"></script>
 </body>
 </html>
