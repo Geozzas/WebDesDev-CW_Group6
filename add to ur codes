@@ -5,11 +5,21 @@
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="profile.html">User Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
             <li><a href="feedback.html">Feedback</a></li>
             <li><a href="team.html">Team</a></li>
         </ul>
     </nav>
-/* you might have to add <br> here to push the footer down more so that it doesnt cover ur content */
+
+/* you have to add class="active" to the page you are currently on so for e.g. 
+if i were to add this to the home page, the code above will look like this: 
+<li><a class="active" href="home.html">Home</a></li> */
+
+
+
+
+/* you might have to add <br> before the footer to push the footer down more so that it doesnt cover ur content */
+
 <footer class="footer">
         <p>Check out our editor's page:</p>
             <ul class="studentEditor">
