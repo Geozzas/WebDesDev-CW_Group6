@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    .footer {
+        position: fixed; /* Set the position to fixed */
+        bottom: 0; /* Align the footer to the bottom of the viewport */
+        width: 100%; /* Make the footer span the entire width */
+      }
+      /* Add margin-bottom to create space between the order summary and the content above it */
+    .container {
+        margin-bottom: 100px; /* Adjust the value as needed */
+      }
+  
+
+    .panel-primary .panel-heading {
+        background-color: #006400; /* Dark green color */
+        color: #fff; /* White text color */
+        padding: 10px; /* Adjust padding as needed */
+        text-align: center; /* Center the text */
+      }       
+      .card button:hover {
+        opacity: 0.7;
+      }
+      #order-summary {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 100px;
+        background-color: #f2f2f2;
+        color: #333;
+        margin-top: 10px; /* Add margin-top to push the order summary down */
+      }
+      
+      
+  </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img class="logo" src="tree.png">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a class="active" href="shop.html">Shop</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+    
+    <footer class="footer">
+        <p>Check out our editor's page:</p>
+            <ul class="studentEditor">
+                <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST1.html">STUDENT 1</a></li>
+                <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST2.html">STUDENT 2</a></li>
+                <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST3.html">STUDENT 3</a></li>
+                <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST4.html">STUDENT 4</a></li>
+            </ul>
+            <ul class="footerMenu">
+                <li class="footerMenu-item"><a class="footerMenu-link" href="home.html">Home</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="gallery.html">Gallery</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="shop.html">Shop</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="profile.html">User Profile</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="sitemap.html">Sitemap</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="feedback.html">Feedback</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="team.html">Team</a></li>
+            </ul>
+    </footer>
+
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">CACTUS £15</div>
+        <div class="panel-body"><img src="https://i.pinimg.com/564x/62/e1/a6/62e1a62a38f03dfa63b85d139e190c4b.jpg" class="img-responsive"  alt="Image" width="250" height="100"></div>
+        <div class="panel-footer">Imported from Mediterranean countries</div>
+        <div class="text-center">
+            <button onclick="addToCart('Cactus', 15, parseInt(document.getElementById('quantity_cactus').value), document.getElementById('ribbon_color_cactus').value)">Add to Cart</button>
+            <select id="ribbon_color_cactus" name="ribbon_color_cactus">
+              <option value="">Select Ribbon Color</option>
+              <option value="red">Red</option>
+              <option value="pink">Pink</option>
+              <option value="yellow">Yellow</option>
+            </select>
+          </div>
+        <div class="text-center" style="margin-top: 10px;">
+            <label for="quantity_cactus">Quantity:</label>
+            <input type="number" id="quantity_cactus" name="quantity_cactus" min="1" value="1" style="width: 50px;">
+          </div>
+      </div>
+    </div>
+
+    
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">3 SET CACTUS £12</div>
+        <div class="panel-body"><img src="https://i.pinimg.com/564x/93/91/a5/9391a5ec8104b0f06c2328395dc86e35.jpg" class="img-responsive"  alt="Image" width="250" height="100"></div>
+        <div class="panel-footer">Imported from South Africa</div>
+        <div class="text-center">
+            <button onclick="addToCart('3 Set Cactus', 12, parseInt(document.getElementById('quantity_set_plants').value), document.getElementById('ribbon_color_set_plants').value)">Add to Cart</button>
+            <select id="ribbon_color_set_plants" name="ribbon_color_set_plants">
+              <option value="">Select Ribbon Color</option>
+              <option value="red">Red</option>
+              <option value="pink">Pink</option>
+              <option value="yellow">Yellow</option>
+            </select>
+          </div>
+        <div class="text-center" style="margin-top: 10px;">
+            <label for="quantity_set_plants">Quantity:</label>
+            <input type="number" id="quantity_set_plants" name="quantity_set_plants" min="1" value="1" style="width: 50px;">
+          </div>
+      </div>
+
+
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">PINK ROSE £12</div>
+        <div class="panel-body"><img src="https://i.pinimg.com/564x/23/24/6f/23246f7efd676e01e0af0ba115e52ffe.jpg" class="img-responsive"  alt="Image" width="250" height="150"></div>
+        <div class="panel-footer">Fresh picked from British fields</div>
+        <div class="text-center">
+            <button onclick="addToCart('Pink Rose', 12, parseInt(document.getElementById('quantity_rose').value), document.getElementById('ribbon_color_rose').value)">Add to Cart</button>
+            <select id="ribbon_color_rose" name="ribbon_color_rose">
+              <option value="">Select Ribbon Color</option>
+              <option value="red">Red</option>
+              <option value="pink">Pink</option>
+              <option value="yellow">Yellow</option>
+            </select>
+        </div>
+        <div class="text-center" style="margin-top: 10px;">
+            <label for="quantity_rose">Quantity:</label>
+            <input type="number" id="quantity_rose" name="quantity_rose" min="1" value="1" style="width: 50px;">
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="order-summary" class="container">
+    <h2>Order Summary</h2>
+    <div id="cart-items"></div>
+    <div id="total"></div>
+    <button onclick="checkout()">Proceed to Checkout</button>
+  </div>
+  
+  <script>
+    let cart = [];
+  
+    function addToCart(productName, price, quantity, ribbonColor, bypassPrompt = true) {
+        if (quantity <= 0) {
+          // Alert the user and return if quantity is 0 or less
+          alert('Quantity must be greater than 0.');
+          return;
+        }
+        
+        // Check if ribbon color is selected
+        if (!ribbonColor) {
+          alert('Please select a ribbon color.');
+          return;
+        }
+      
+        // Add item to cart
+        let itemIndex = cart.findIndex(item => item.productName === productName && item.ribbonColor === ribbonColor);
+        if (itemIndex !== -1) {
+          // If item already exists in cart with the same ribbon color, update quantity
+          cart[itemIndex].quantity += quantity;
+        } else {
+          // If item is not in cart or with a different ribbon color, add it
+          cart.push({ productName, price, quantity, ribbonColor });
+        }
+        updateCart();
+      }
+      
+      function removeItem(index) {
+        // Remove item from cart
+        cart.splice(index, 1);
+        updateCart();
+      }
+      
+      function updateCart() {
+        let cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        let total = 0;
+        cart.forEach((item, index) => {
+          let itemHTML = `
+            <div>
+              <span>${item.productName} x ${item.quantity}</span>
+              <span>£${item.price * item.quantity}</span>
+              <span>Ribbon Color: ${item.ribbonColor}</span>
+              <button onclick="removeItem(${index})">Remove</button>
+            </div>
+          `;
+          cartItems.innerHTML += itemHTML;
+          total += item.price * item.quantity;
+        });
+        document.getElementById('total').innerHTML = `<strong>Total: £${total}</strong>`;
+      }
+      
+      function checkout() {
+        if (cart.length > 0) {
+          // Proceed to checkout
+          window.location.href = "checkout.html"; // Redirect to checkout page
+        } else {
+          alert('Please add items to the cart before proceeding to checkout.');
+        }
+      }
+</script>
+
+</body>
+</html>
