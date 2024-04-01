@@ -1,10 +1,10 @@
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: Courier, 'Courier New', monospace;
     font-size: 100%;
-    background: linear-gradient(to top, #89bd87 0%, #d0e2cf 100%);
+    background: linear-gradient(to top, #266b39 0%, #d0e2cf 100%);
     color: #090f08;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
@@ -20,32 +20,47 @@ h1 {
 h2 {
     text-align: center;
     font-size: 2.1875em;
-    padding-top: 15%;
+    padding-top: 10%;
     padding-bottom: 30px;
 }
 
 p {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin: auto 25%;
     text-align: justify;
     font-size: 1.125em;
     padding-bottom: 10px;
 }
 
-nav {
-    position: sticky;
+.navbar { /* Header */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background: linear-gradient(to top, #cddecc, #2b4929);
+    /* Colour of the navbar */
+    height: 75px;
 }
 
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 65px;
+    height: 65px;
+    margin: 4px 4px 4px 10px;
+}
+
+
 .navbar ul {
+    display: inline-block;
     list-style-type: none;
     justify-content: center;
     align-items: center;
+    box-shadow: none;
     padding: 0;
     margin: 0;
-    background-color: #152414;  /* Colour of the navbar */
+    background: linear-gradient(to top, #cddecc, #2b4929);
+    /* Colour of the navbar */
+    opacity: 80%;
     overflow: hidden;
 }
 
@@ -54,25 +69,34 @@ nav {
 }
 
 .navbar a {
-    font-family: Arial, sans-serif;
-    color: #deecdd;  /* Colour of navbar words */
+    font-family: Courier, 'Courier New', monospace;
+    font-size: 18px;
+    color: white;
+    /* Colour of navbar words */
     text-decoration: none;
+    box-shadow: none;
+    opacity: 100%;
     text-align: center;
-    padding: 16px 12px;
+    padding: 23px 20px;
     margin: 3px;
     display: flex;
 }
 
-a:hover {
-    color: #e3eee2;  /* Colour of hovered navbar words */
-    background-color: #334f33;  /* BG Colour of hovered navbar */
+.navbar a:hover {
+    color: darkslategray;
+    /* Colour of hovered navbar words */
+    background-color: #c9dfc8;
+    /* BG Colour of hovered navbar */
+    opacity: 100%;
     margin: 3px;
 }
 
 a.active {
     text-decoration: underline;
-    color: #1b2e1a;  /* Colour of active navbar words */
-    background-color: #ccddca;  /* BG Colour of active navbar */
+    color: #301245;
+    /* Colour of active navbar words */
+    background-color: #ccddca;
+    /* BG Colour of active navbar */
     margin: 3px;
 }
 
@@ -81,10 +105,65 @@ a.active {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 85px;
     padding: 0 20px;
-    background: #1b2e1a;
+    background: linear-gradient(to bottom, #266b39 0%, #00191f 90%);
+    opacity: 98%;
+    color: lightgray;
     justify-content: center;
     align-items: center;
     z-index: 2;
+    font-size: smaller;
+}
+
+footer p {
+    margin: 10px 0 0;
+    text-align: justify;
+    font-size: 0.9em;
+    padding-bottom: 0;
+}
+
+.studentEditor,
+.footerMenu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 80px 5px 0;
+    flex-wrap: wrap;
+}
+
+.studentEditor-item,
+.footerMenu-item {
+    list-style: none;
+}
+
+.studentEditor-link {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.studentEditor-link:hover {
+    transform: translateY(-10px);
+}
+
+.footerMenu-link {
+    font-size: 0.8rem;
+    color: #deecdd;
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.5;
+    font-weight: 300;
+}
+
+.footerMenu-link:hover {
+    opacity: 1;
 }
