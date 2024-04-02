@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Life On Land Feedback</title>
@@ -97,17 +97,35 @@
         .hidden {
             display: none;
         }
+
+        #topBttn {
+            position: fixed;
+            border: none;
+            outline: none;
+            background-color: #266b39;
+            color: lightgray;
+            font-size: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            bottom: 100px;
+            right: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 99;
+        }
     </style>
 </head>
 
 <body>
+    <button onclick="topFunction()" id="topBttn" title="Go to top">Go to Top</button>
     <nav class="navbar">
-        <img class="logo" src="tree.png">
+        <img class="logo" src="images/tree.png" alt="Tree Logo">
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="profile.html">User Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
             <li><a class="active" href="feedback.html">Feedback</a></li>
             <li><a href="team.html">Team</a></li>
         </ul>
@@ -352,28 +370,29 @@
             return comment.value;
         }
 
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
     </script>
+    <footer class="footer">
+        <p>Check out our editor's page:</p>
+        <ul class="studentEditor">
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST1.html">STUDENT 1</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST2.html">STUDENT 2</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST3.html">STUDENT 3</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST4.html">STUDENT 4</a></li>
+        </ul>
+        <ul class="footerMenu">
+            <li class="footerMenu-item"><a class="footerMenu-link" href="home.html">Home</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="gallery.html">Gallery</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="shop.html">Shop</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="profile.html">User Profile</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="sitemap.html">Sitemap</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="feedback.html">Feedback</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="team.html">Team</a></li>
+        </ul>
+    </footer>
 </body>
-<br>
-<br>
-<br>
-<footer class="footer">
-    <p>Check out our editor's page:</p>
-    <ul class="studentEditor">
-        <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST1.html">STUDENT 1</a></li>
-        <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST2.html">STUDENT 2</a></li>
-        <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST3.html">STUDENT 3</a></li>
-        <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST4.html">STUDENT 4</a></li>
-    </ul>
-    <ul class="footerMenu">
-        <li class="footerMenu-item"><a class="footerMenu-link" href="home.html">Home</a></li>
-        <li class="footerMenu-item"><a class="footerMenu-link" href="gallery.html">Gallery</a></li>
-        <li class="footerMenu-item"><a class="footerMenu-link" href="shop.html">Shop</a></li>
-        <li class="footerMenu-item"><a class="footerMenu-link" href="profile.html">User Profile</a></li>
-        <li class="footerMenu-item"><a class="footerMenu-link" href="feedback.html">Feedback</a></li>
-        <li class="footerMenu-item"><a class="footerMenu-link" href="team.html">Team</a></li>
-    </ul>
-</footer>
-<br>
 
 </html>
