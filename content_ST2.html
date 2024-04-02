@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life On Land</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(to top, #385962 0%, #f2f6f7 100%);
+        }
+
+        .navbar {
+            background: linear-gradient(to top, #dde8eb, #2c464d);
+        }
+
+        .navbar ul {
+            background: linear-gradient(to top, #dde8eb, #2c464d);
+        }
+
+        .navbar a:hover {
+            background-color: #dde8eb;
+        }
+
+        .section {
+            font-size: 1.5em;
+            margin: 30px 25%;
+            text-align: justify;
+            padding-bottom: 10px;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 0;
+            padding-top: 10px;
+            width: 100%;
+            background: linear-gradient(to bottom, #c8c9df, #8a8dbc);
+        }
+
+        .contentUL {
+            list-style-type: none;
+            font-size: 1.5em;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container a {
+            color: whitesmoke;
+            text-decoration: none;
+            display: block;
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
+        .container a:hover {
+            background-color: #7578b0;
+        }
+
+        .photoContainer {
+            position: relative;
+            display: block;
+            text-align: center;
+            width: 650px;
+            height: 400px;
+            color: white;
+            margin: 10px 0;
+        }
+
+        .photos {
+            display: block;
+            margin: 0 0;
+            width: 650px;
+            height: 400px;
+        }
+
+        .photoCap {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .define {
+            text-decoration-line: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.1em;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: linear-gradient(to bottom, #416772 0%, #203339 90%);
+        }
+
+        #topBttn {
+            position: fixed;
+            border: none;
+            outline: none;
+            background-color: #385962;
+            color: lightgray;
+            font-size: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            bottom: 100px;
+            right: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 99;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="topBttn" title="Go to top">Go to Top</button>
+    <nav class="navbar">
+        <img class="logo" src="images/tree.png" alt="Tree Logo">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <ul class="contentUL">
+            <li><a href="#our-goals">OUR GOALS</a></li>
+            <li><a href="#life-on-land">LIFE ON LAND</a></li>
+            <li><a href="#challenges">CHALLENGES</a></li>
+            <li><a href="#funding">FUNDING</a></li>
+            <li><a href="#progress">PROGRESS</a></li>
+        </ul>
+    </div>
+    </div>
+    <h1>Content Page - Student 2</h1>
+    <h1 id="our-goals">OUR GOALS</h1>
+    <p class="section">
+        Ultimately, our goal is to raise awareness to protect, restore and promote sustainable use of our terrestrial
+        ecosystems, sustainably manage forests and combat desertification. Additionally, our goal is to raise awareness
+        to halt and reverse land degradation and biodiversity loss.
+    </p>
+    <h1 id="life-on-land">LIFE ON LAND</h1>
+    <p class="section">
+        Terrestrial ecosystems, which encompass a wide range of environments including forests, grasslands, deserts,
+        and tundra, are vital for sustaining human life, contributing to over half of global GDP and encompassing
+        diverse
+        cultural, spiritual, and economic values. Terrestrial ecosystems also play a crucial role in preserving the
+        planet's
+        well-being and sustaining its rich biodiversity, which encompasses a wide variety of organisms. Safeguarding and
+        preserving these ecosystems is essential for fostering sustainable development and securing a habitable
+        environment for generations to come.
+    </p>
+    <div class="photoContainer">
+        <img class="photos" src="images/rainforest.jpg" alt="Rainforest">
+        <div class="photoCap">RAINFORESTS</div>
+    </div>
+    <div class="photoContainer">
+        <img class="photos" src="images/grassland.jpg" alt="Grasslands">
+        <div class="photoCap">GRASSLANDS</div>
+    </div>
+    <div class="photoContainer">
+        <img class="photos" src="images/arctic.jpg" alt="Arctic">
+        <div class="photoCap">TUNDRAS</div>
+    </div>
+    <div class="photoContainer">
+        <img class="photos" src="images/desert.jpg" alt="Desert">
+        <div class="photoCap">DESERTS</div>
+    </div>
+    <h1 id="challenges">CHALLENGES</h1>
+    <p class="section">
+        However, the world faces a triple crisis of climate change,
+        pollution and biodiversity loss, each of which presents significant
+        challenges to both the environment and human societies. <br>
+        <span class="define">Climate change:</span> Climate change refers
+        to long-term shifts in temperatures and weather patterns. <br>
+        <span class="define">Pollution:</span> The major types of pollution
+        are air pollution, water pollution, and land pollution. Pollution of all
+        kinds can have negative effects on the environment and wildlife and
+        often impacts human health and well-being. <br>
+        <span class="define">Biodiversity Loss:</span> Biodiversity, or the
+        variety of all living things on our planet, has been declining at an
+        alarming rate in recent years, mainly due to human activities, such as
+        land use changes, pollution and climate change.
+    </p>
+    <p class="section">
+        These escalating trends of forest loss, land degradation, and species
+        extinction pose severe threats to both the planet and people. Forests,
+        which play a crucial role in climate regulation, air purification,
+        biodiversity conservation, and providing livelihoods for millions of
+        people, are rapidly disappearing due to agriculture, urbanization, and
+        resource extraction. Land degradation, caused by practices such as
+        deforestation and soil erosion, undermines soil fertility, water quality,
+        and food security. Biodiversity maintains the ecological balance and
+        provides us with clean air, fresh water, good quality soil and crop
+        pollination. It helps us fight climate change and adapt to it as well
+        reduce the impact of natural hazards.
+    </p>
+    <h1 id="funding">FUNDING</h1>
+    <p class="section">
+        To halt and reverse biodiversity loss, a comprehensive strategy is necessary, 
+        which integrates both regulatory and voluntary measures, while also ensuring 
+        the mobilization and alignment of financing for biodiversity conservation 
+        efforts. Economic tools are pivotal in encouraging the preservation and 
+        sustainable utilization of biodiversity, and they can effectively mobilize 
+        funding while integrating biodiversity considerations across various sectors. 
+        These tools encompass policy measures like biodiversity-related taxes, fees, 
+        and charges, positive subsidies, payments for ecosystem services, and 
+        biodiversity offsets.
+    </p>
+    <h1 id="progress">PROGRESS</h1>
+    <p class="section">
+        Despite some progress in sustainable forest management,
+        protected areas, and the uptake of national biodiversity values
+        and natural capital accounting, most improvements have been
+        modest. The recently adopted Kunming-Montreal Global
+        Biodiversity Framework outlines four outcome-oriented goals
+        to be achieved by 2050 and 23 targets to be achieved by 2030.
+    </p>
+    <p class="section">
+        A fundamental shift in humanity's relationship with nature is imperative
+        to effectively address the interconnected crises of climate change, pollution,
+        and biodiversity loss. Accelerated action is needed to tackle the root causes
+        of these crises, which often stem from unsustainable human activities such as
+        deforestation, fossil fuel consumption, industrial pollution, and overexploitation
+        of natural resources. Furthermore, there is a pressing need for better recognition
+        of the tremendous value of nature and the ecosystem services it provides. By
+        acknowledging and appreciating the vital role of nature, we can foster greater
+        appreciation for conservation efforts and promote more responsible stewardship
+        of the planet's resources. Land and ecosystem restoration offer cost-effective 
+        solutions to address climate change, biodiversity loss, food and water security, 
+        and disaster impacts. To this end, governments, businesses and communities must 
+        collaborate to conserve natural areas, scale up nature-positive food production 
+        and develop green urban areas, infrastructure and supply chains.
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;  
+        }
+    </script>
+    <footer class="footer">
+        <p>Check out our editor's page:</p>
+        <ul class="studentEditor">
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST1.html">STUDENT 1</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST2.html">STUDENT 2</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST3.html">STUDENT 3</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST4.html">STUDENT 4</a></li>
+        </ul>
+        <ul class="footerMenu">
+            <li class="footerMenu-item"><a class="footerMenu-link" href="home.html">Home</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="gallery.html">Gallery</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="shop.html">Shop</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="profile.html">User Profile</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="sitemap.html">Sitemap</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="feedback.html">Feedback</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="team.html">Team</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
