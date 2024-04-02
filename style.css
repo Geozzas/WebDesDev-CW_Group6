@@ -32,21 +32,9 @@ h3 {
 }
 
 p {
-    margin: 30px 25%;
     text-align: justify;
     font-size: 1.125em;
-    padding-bottom: 10px;
-}
-
-.navbar { /* Header */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to top, #cddecc, #2b4929);
-    /* Colour of the navbar */
-    height: 75px;
-}
+} 
 
 .logo {
     display: inline-block;
@@ -56,6 +44,15 @@ p {
     margin: 4px 4px 4px 10px;
 }
 
+.navbar { /* Navbar Header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #cddecc, #2b4929); /* Colour of the navbar */
+    height: 75px;
+    z-index: 1;
+}
 
 .navbar ul {
     display: inline-block;
@@ -65,8 +62,7 @@ p {
     box-shadow: none;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to top, #cddecc, #2b4929);
-    /* Colour of the navbar */
+    background: linear-gradient(to top, #cddecc, #2b4929); /* Colour of the navbar */
     overflow: hidden;
 }
 
@@ -76,8 +72,7 @@ p {
 
 .navbar a {
     font-size: 18px;
-    color: white;
-    /* Colour of navbar words */
+    color: white; /* Colour of navbar words */
     text-decoration: none;
     box-shadow: none;
     opacity: 100%;
@@ -85,23 +80,20 @@ p {
     padding: 23px 20px;
     margin: 3px;
     display: flex;
+    border-radius: 3px;
 }
 
 .navbar a:hover {
-    color: darkslategray;
-    /* Colour of hovered navbar words */
-    background-color: #c9dfc8;
-    /* BG Colour of hovered navbar */
+    color: darkslategray; /* Colour of hovered navbar words */
+    background-color: #c9dfc8; /* BG Colour of hovered navbar */
     opacity: 100%;
     margin: 3px;
 }
 
 a.active {
     text-decoration: underline;
-    color: #301245;
-    /* Colour of active navbar words */
-    background-color: #ccddca;
-    /* BG Colour of active navbar */
+    color: #301245; /* Colour of active navbar words */
+    background-color: #ccddca; /* BG Colour of active navbar */
     margin: 3px;
 }
 
