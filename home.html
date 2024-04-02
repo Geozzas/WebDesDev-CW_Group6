@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Life On Land Homepage</title>
@@ -11,6 +11,36 @@
             height: 300px;
         }
 
+        .section {
+            font-size: 1.5em;
+            margin: 30px 25%;
+            text-align: justify;
+            padding-bottom: 10px;
+        }
+
+        .contentLink {
+            font-family: Courier, monospace;
+            font-weight: 800;
+            text-decoration-line: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.1em;
+            color: #090f08;
+        }
+
+        .contentLink:visited {
+            font-family: Courier, monospace;
+            font-weight: 800;
+            text-decoration-line: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.1em;
+            color: #e8f1e7;
+        }
+
+        .contentLink:hover {
+            background-color: #B9CDBE;
+            color: white;
+        }
+
         .container {
             text-align: center;
             margin-top: 10%;
@@ -20,7 +50,8 @@
             background: linear-gradient(to bottom, #c8c9df, #8a8dbc);
         }
 
-        .studentContent { /* ul */
+        .studentContent {
+            /*UL*/
             list-style-type: none;
             font-size: 2em;
             justify-content: center;
@@ -44,7 +75,7 @@
 
 <body>
     <nav class="navbar">
-        <img class="logo" src="tree.png">
+        <img class="logo" src="images/tree.png" alt="Tree Logo">
         <ul>
             <li><a class="active" href="home.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
@@ -55,41 +86,40 @@
             <li><a href="team.html">Team</a></li>
         </ul>
     </nav>
-    <img class="logoHome" src="tree.png" alt="Tree Logo">
-    <h1>Sustainable Development</h1>
-    <p>
+    <img class="logoHome" src="images/tree.png" alt="Tree Logo">
+    <h1>SUSTAINABLE DEVELOPMENT</h1>
+    <p class="section">
         Our Being Westminster strategy outlines our commitment to being
         progressive, compassionate and responsible to help students and
         colleagues from different backgrounds fulfil their potential and
         contribute to a more sustainable, equitable and healthier
         society.
     </p>
-    <p>
-        We adopted the United Nations Sustainable Development Goals
-        (SDGs)
-        framework to support this core mission and to record, measure
-        and
-        improve our contribution to a range of social, environmental and
-        economic outcomes.
+    <p class="section">
+        We adopted the <a class="contentLink" href="https://sdgs.un.org/goals">United Nations Sustainable Development
+            Goals (SDGs) framework</a>
+        to support this core mission and to record, measure and improve our contribution
+        to a range of social, environmental and economic outcomes.
     </p>
-    <h2>Life on Land</h2>
-    <p>
-        Protect, restore and promote sustainable use of terrestrial
-        ecosystems, sustainably manage forests, combat desertification,
-        and halt and reverse land degradation and halt biodiversity loss.
+    <h1>OUR GOALS</h1>
+    <p class="section">
+        Ultimately, our goal is to raise awareness to protect, restore and promote sustainable use of our terrestrial
+        ecosystems, sustainably manage forests and combat desertification. Additionally, our goal is to raise awareness
+        to halt and reverse land degradation and halt biodiversity loss.
     </p>
-    <p>
+    <h1>LIFE ON LAND</h1>
+    <p class="section">
         Terrestrial ecosystems are vital for sustaining human life,
         contributing to over half of global GDP and encompassing diverse
         cultural, spiritual, and economic values.
     </p>
-    <p>
+    <p class="section">
         However, the world faces a triple crisis of climate change,
         pollution and biodiversity loss. Escalating trends of forest
         loss, land degradation and the extinction of species pose a
         severe threat to both the planet and people.
     </p>
-    <p>
+    <p class="section">
         Despite some progress in sustainable forest management,
         protected areas, and the uptake of national biodiversity values
         and natural capital accounting, most improvements have been
@@ -97,7 +127,7 @@
         Biodiversity Framework outlines four outcome-oriented goals
         to be achieved by 2050 and 23 targets to be achieved by 2030.
     </p>
-    <p>
+    <p class="section">
         A fundamental shift in humanity’s relationship with nature is
         essential, along with accelerated action to address the root
         causes of these interconnected crises and better recognition of
@@ -107,10 +137,10 @@
     <div class="container">
         <h3>Links to Student Content</h3>
         <ul class="studentContent">
-            <li class="studentContent-link"><a href="content_ST1.html">Student 1 Content Page</a></li>
-            <li class="studentContent-link"><a href="content_ST2.html">Student 2 Content Page</a></li>
-            <li class="studentContent-link"><a href="content_ST3.html">Student 3 Content Page</a></li>
-            <li class="studentContent-link"><a href="content_ST4.html">Student 4 Content Page</a></li>
+            <li><a href="content_ST1.html">Student 1 Content Page</a></li>
+            <li><a href="content_ST2.html">Student 2 Content Page</a></li>
+            <li><a href="content_ST3.html">Student 3 Content Page</a></li>
+            <li><a href="content_ST4.html">Student 4 Content Page</a></li>
         </ul>
     </div>
     <footer class="footer">
