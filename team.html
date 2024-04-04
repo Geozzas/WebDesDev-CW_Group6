@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "styleSheet" href = "style.css">
+    <title>Team Page</title>
+    <style>
+        body{
+            background: linear-gradient(to top, #89bd87 0%, #d0e2cf 100%) !important;
+        }
+        .team-members{
+            display: flex;
+            justify-content: center; /* members horizonally*/
+            flex-wrap: wrap; /* wraps to the next line */
+        }
+        .team-member {
+            flex: 0 0 auto; /* stops flex items growing*/
+            margin: 20px;
+            position: relative;
+        }
+        .team-member img {
+            width: 200px; 
+            height: auto;
+            border: 2px solid #333; /* initial border */
+            transition: border-color 0.3s ease;
+
+        }
+        .team-member .details {
+            position: absolute; /* details on image of team member (when hovered)*/
+            bottom: -350%; /* initially hides the details outside of screen*/
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8); /* translucent background */
+            padding: 10px;
+            border-radius: 5px;
+            transition: bottom 0.3s ease;
+            width: 200px; 
+            text-align: center;
+        }
+        .team-member:hover img {
+            border-color: #ff6600; /* change border color when hovering */
+        }
+        .team-member:hover .details {
+            bottom: 20px; /* shows details when hovering */
+        }
+
+        h1 {
+            padding-top: 5% !important;
+            padding-bottom: 0% !important;
+        }
+
+        h2 {
+            padding-top: 0% !important;
+            padding-bottom: 0% !important;
+            font-size: 1em !important;
+            text-align: justify;
+        }
+
+        p {
+            margin-left: 0% !important;
+            margin-right: 0% !important;
+            /* text-align: center !important; */
+            font-size: 0.7183em;
+            padding-bottom:0px !important;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <img class = "logo" src = "tree.png" alt = "tree">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a class = "active" href="team.html">Team</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Meet The Team</h1>
+    <h2>Hover over our images to see our details!</h2>
+
+    <div class = "team-members">
+        <div class="team-member">
+            <img src="images/member1.png" alt="Team Member 1" title="Team Member 1">
+            <div class="details">
+                <h3>Maryam Asif</h3>
+                <p>Role: Student 1</p>
+                <p>Designed & Implemented pages:</p>
+                <p>Splashscreen | Shop</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="images/member2.png" alt="Team Member 2" title="Team Member 2">
+            <div class="details">
+                <h3>Georgia Tjiu</h3>
+                <p>Role: Student 2</p>
+                <p>Designed & Implemented pages:</p>
+                <p>Homepage|Stylesheet</p>
+                <p>Navbar | Feedback</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/member3.png" alt="Team Member 3" title="Team Member 3">
+            <div class="details">
+                <h3>Bernard Vecino</h3>
+                <p>Role: Student 3</p>
+                <p>Designed & Implemented pages:</p>
+                <p>Profile | Team</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="images/member4.png" alt="Team Member 4" title="Team Member 4">
+            <div class="details">
+                <h3>Subhan Imran</h3>
+                <p>Role: Student 4</p>
+                <p>Designed & Implemented pages:</p>
+                <p>Gallery | Sitemap</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>Check out our editor's page:</p>
+            <ul class="studentEditor">
+                <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST1.html">STUDENT 1</a></li>
+                <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST2.html">STUDENT 2</a></li>
+                <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST3.html">STUDENT 3</a></li>
+                <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST4.html">STUDENT 4</a></li>
+            </ul>
+            <ul class="footerMenu">
+                <li class="footerMenu-item"><a class="footerMenu-link" href="home.html">Home</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="gallery.html">Gallery</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="shop.html">Shop</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="profile.html">User Profile</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="feedback.html">Feedback</a></li>
+                <li class="footerMenu-item"><a class="footerMenu-link" href="team.html">Team</a></li>
+            </ul>
+    </footer>
+</body>
+</html>

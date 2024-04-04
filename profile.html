@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<!-- User Profile Page -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Profile</title>
+<link rel="styleSheet" href="style.css">
+<style>
+    .container {
+        width: 45%;
+        height: 100vh;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 5%;
+        margin-bottom:5%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* x-offset, y-offset, blur-radius, spread-radius color */
+        padding: 20px;
+    }
+
+    #progress-bar {
+        width: 90%;
+        height: 30px;
+        margin-left: 5%;
+        background-color: lightslategrey; /* colour of empty bar */
+        border-radius: 5px;
+        display: none; /* initially hide progress bar*/
+    }
+
+    #progress {
+        width: 0%;
+        height: 100%;
+        background-color: #4cc050;
+        text-align: center;
+        line-height: 30px; /* distance from bottom of bar */
+        color: black; /* text color */
+        border-radius: 5px;
+    }
+
+    h2 {
+        padding-top: 0% !important;
+        padding-bottom: 0%;
+    }
+    button {
+        margin-right: 10px; /* spacing between buttons */
+    }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <img class = "logo" src = "tree.png" alt = "tree">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a class="active" href="profile.html">User Profile</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+    </ul>
+</nav>
+<br>
+<br>
+<div class="container">
+    <div id="display">
+        <h2>User Profile</h2>
+        <button onclick="startPrompts()">Start</button> <!-- start button -->
+        <button id="nextButton" style="display: none;" onclick="nextPrompts()">Next</button> <!-- next button -->
+        <button id="skipButton" style="display: none;" onclick="skipPrompts()">Skip</button> <!-- skip button -->
+        <div id="progress-bar" style="display: none;"> <!--initially hides progress bar-->
+            <div id="progress">0%</div>
+        </div>
+    </div>
+</div>
+<script>
+    function startPrompts() {
+        document.getElementById('progress-bar').style.display = 'block'; // show progress bar
+        document.getElementById('nextButton').style.display = 'block'; // show next button
+        document.getElementById('skipButton').style.display = 'block'; // show skip button
+
+        function updateProfile1() { /* Basic Information */
+            var width = 0;
+            var firstName = prompt("Enter your First Name:         1/5");
+            var lastName = prompt("Enter your Last Name:         2/5");
+            var age = prompt("Enter your age:         3/5");
+            var gender = prompt("Enter your gender:         4/5");
+            var agree = prompt("Do you agree to the T&Cs:         5/5");
+
+            var profileInfo1 = "<p><strong>First Name:</strong> " + firstName + "</p>" +
+                                "<p><strong>Last Name:</strong> " + lastName + "</p>" +
+                                "<p><strong>Age:</strong> " + age + "</p>" +
+                                "<p><strong>Gender:</strong> " + gender + "</p>"
+                                "<p><strong>Agreed with the T&Cs:</strong> " + agree + "</p>";
+
+            if (width >= 100) {
+                clearInterval(interval)
+            } else {
+                width += 20; 
+                document.getElementById("progress").style.width = width + '%';
+                document.getElementById("progress").innerHTML = width + '%';
+                return width;
+            document.getElementById("display").innerHTML += profileInfo; //display info in container
+            }
+        }
+        updateProfile1()
+
+    }
+    
+    function nextPrompts() {
+        
+        var discover = prompt("How did you find out about this:     1/5");
+        var reason = prompt("What brings you to this cause:     2/5");
+        var task = prompt("What is your task:     3/5");
+        var place = prompt("Where are you planning to target:     4/5");
+        var type = prompt("How will you do so:     5/5");
+
+        function updateProfile2() { /* volunteering */
+            var profileInfo2 = "<p><strong>Discovered:</strong> " + discover + "</p>" +
+                                "<p><strong>Reason:</strong> " + reason + "</p>" +
+                                "<p><strong>Task</strong> " + task + "</p>" +
+                                "<p><strong>Place:</strong> " + place + "</p>"
+                                "<p><strong>Assignment type:</strong> " + type + "</p>";
+
+            if (width >= 100) {
+                clearInterval(interval)
+            } else {
+                width += 20; // Increment progress width
+                document.getElementById("progress").style.width = width + '%';
+                document.getElementById("progress").innerHTML = width + '%';
+            }
+            document.getElementById("display").innerHTML += profileInfo;
+        }
+        updateProfile2();
+    }
+
+    function skipPrompts() {
+        // Implement code to skip the current set of prompts and proceed to the next set
+    }
+
+</script>
+<br>
+<br>
+
+<footer class="footer">
+    <p>Check out our editor's page:</p>
+    <ul class="studentEditor">
+        <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST1.html">STUDENT 1</a></li>
+        <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST2.html">STUDENT 2</a></li>
+        <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST3.html">STUDENT 3</a></li>
+        <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST4.html">STUDENT 4</a></li>
+    </ul>
+    <ul class="footerMenu">
+        <li class="footerMenu-item"><a class="footerMenu-link" href="home.html">Home</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="gallery.html">Gallery</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="shop.html">Shop</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="profile.html">User Profile</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="feedback.html">Feedback</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="team.html">Team</a></li>
+    </ul>
+</footer>
+</body>
+</html>

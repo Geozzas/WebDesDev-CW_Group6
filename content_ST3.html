@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life on Land: Contents page</title>
+    <link rel = "styleSheet" href = "style.css">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            padding-top: 0% !important;
+            padding-bottom: 0% !important;
+        }
+        nav {
+            padding-top: 25px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration:underline;
+            color: #333;
+        }
+        div {
+            padding: 5px;
+        }
+        footer {
+            padding: 20px;
+        }
+
+        #back-to-top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.4);
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            padding: 10px;
+            display: none; /* Hide by default */
+        }
+
+        p{
+            margin: 0% !important;
+            text-align: left !important;
+            font-size: 1.25em !important;
+            padding-bottom: 10px;
+            padding-left: 15px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.1875em;
+            padding-top: 0%;
+            padding-bottom: 30px;
+        }
+        h3 {
+            text-align: left;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Life on Land</h1>
+    <h3>Brief history of life on land</h3>
+    <p>Over 4 billion years ago, the earliest forms were introduced as single-celled organisms mostly being bacteria and archaea, which have evolved and diversified to become forms of life on land, such as plants and fungi (around 500 millions years ago), amphibians, reptiles, dinosaurs and mammals (from 360 million years ago to present). </p>
+    <nav>
+        <ul>
+            <li><a href="#introduction"><b>Introduction</b></a></li>
+            <li><a href="#habitats"><b>Habitats</b></a></li>
+            <li><a href="#biodiversity"><b>Biodiversity</b></a></li>
+            <li><a href="#conservation"><b>Conservation</b></a></li>
+        </ul>
+    </nav>
+
+    
+        <div id="introduction">
+            <h2>Introduction</h2>
+    <div class = container>
+            <img src = "https://fix-the-planet.com/wp-content/uploads/2019/04/rainforest.jpg" alt = "life-on-land" width="800" style="margin-left: 240px;">
+            <p><b>Life on Earth originated in the oceans, however, around 500 millions years ago, some organisms began to venture onto land. This transition to terrestrial life required adaptations to survive in a new environment characterized byfluctuating temperatures, reduced buoyancy, and limited water availability. 
+                The first organisms to colonize land were likely simple plants and fungi, such as mosses, liverworts, and lichens. These pioneers played a crucial role in stabilizing soils and creating habitats for other terrestrial life forms.
+                To thrive on land, organisms evolved a variety of adaptations. Plants developed roots to anchor themselves in soil and absorb water and nutrients. They also evolved specialized tissues for transporting water and photosynthesizing in the presence of sunlight. Meanwhile, animals adapted by developing structures like lungs for breathing air, limbs for locomotion, and impermeable skin to prevent dehydration.
+                Life on land is characterized by intricate ecological interactions among different organisms. These interactions include predation, competition for resources, mutualistic relationships (such as pollination and seed dispersal), and decomposition, all of which contribute to the functioning of terrestrial ecosystems.
+            </b></p>
+        </div>
+    </div>
+
+    <div id="habitats">
+        <h2>Habitats</h2>
+        <h3>Forests</h3>
+        <p></p>
+    </div>
+
+    <div id="biodiversity">
+        <h2>Biodiversity</h2>
+        <p></p>
+    </div>
+
+    <div id="conservation">
+        <h2>Conservation</h2>
+        <p></p>
+    </div>
+
+    <button id="back-to-top-button" onclick="scrollToTop()">Back to Top</button>
+
+    <script>
+        window.onscroll = function() {scrollFunction()}; //shows back to top button when scrolling down
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { //when scrolled down past 20 pixels
+                document.getElementById("back-to-top-button").style.display = "block"; //show the button 
+            } else { //if less that 20 pixels scrolled
+                document.getElementById("back-to-top-button").style.display = "none"; //hide the button
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0; // safari
+            document.documentElement.scrollTop = 0; // normal web apps
+        }
+    </script>
+</body>
+</html>
