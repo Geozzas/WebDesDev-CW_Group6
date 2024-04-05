@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* Styles for the Go to top button */
+.go-to-top {
+  display: none; /* Initially hidden */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 99; /* Ensure it's above other content */
+}
+
+.go-to-top:hover {
+  background-color: #45a049;
+}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <img class="logo" src="tree.png">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="profile.html">User Profile</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+    </ul>
+</nav>
+
+<h1> Life on Land</h1>
+<p>
+    Protecting land ecosystems, managing forests sustainably, and stopping the loss of biodiversity are the objectives of Goal 15 of the UN's Sustainable Development Goals. These ecosystems support human life, play a major role in the world economy, and are significant from a cultural and spiritual standpoint. But issues like pollution, climate change, and land degradation pose a threat to their continued survival. To solve these problems, immediate action is required. This includes conservation initiatives, sustainable land management techniques, and laws that support sustainable land use. Businesses, governments, and communities must work together to maintain a healthy world for current and future generations.
+</p>
+
+<h2>How will this impact people?</h2>
+<p>
+    Reduced farming income, increased carbon emissions, decreased biodiversity, and land degradation are all caused by the loss in tree populations. The percentage of forests covered by long-term management plans or protection has increased or stayed stable globally and in the majority of regions, according to 2020 data, despite continued forest loss. Long-term environmental effects of human activity include the extinction of species, disruption of natural balance, and weakened ecosystem resilience. According to a new United Nations biodiversity assessment, there is an unprecedented threat to the approximately 1 million animal and plant species that could become extinct within the next few decades.
+</p>
+
+<h2>Will this change the future?</h2>
+<p>
+    The long-term effects of continuing deforestation, biodiversity loss, and environmental degradation will have a significant impact on life as we know it now. Ecosystems are in danger of collapsing because vital functions like pollination, water purification, and climate regulation are disrupted by deforestation and biodiversity loss. The stability of entire ecosystems, human health, and food may all be impacted in an ongoing manner by this change. 
+</p>
+
+<button class="go-to-top" onclick="goToTop()">Go to Top</button>
+
+<script>
+// Function to scroll to the top of the page
+function goToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Smooth scrolling behavior
+  });
+}
+
+// Show the Go to top button when scrolling down
+window.onscroll = function() {
+  var button = document.querySelector('.go-to-top');
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+};
+</script>
+
+</body>
+</html>
