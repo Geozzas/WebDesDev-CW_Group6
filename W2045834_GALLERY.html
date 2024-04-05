@@ -5,18 +5,175 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Life on Land</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #ace5b5; /*  green background */
+body {
+    margin: 0px;
+    font-family: Courier, 'Courier New', monospace;
+    font-size: 100%;
+    background: linear-gradient(to top, #266b39 0%, #d0e2cf 100%);
+    color: #090f08;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+h1 {
     text-align: center;
-    margin: 0;
+    font-size: 2.5em;
+    padding-top: 10%;
+    padding-bottom: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.1875em;
+    padding-top: 10%;
+    padding-bottom: 30px;
+}
+
+p {
+    margin: auto 25%;
+    text-align: justify;
+    font-size: 1.125em;
+    padding-bottom: 10px;
+}
+
+.navbar { /* Header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #cddecc, #2b4929);
+    /* Colour of the navbar */
+    height: 75px;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 65px;
+    height: 65px;
+    margin: 4px 4px 4px 10px;
+}
+
+
+.navbar ul {
+    display: inline-block;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
     padding: 0;
-  }
-  h1 {
-    color: #008000; /* Dark green text */
-    font-size: 36px;
-    margin-top: 20px;
-  }
+    margin: 0;
+    background: linear-gradient(to top, #cddecc, #2b4929);
+    /* Colour of the navbar */
+    opacity: 80%;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    font-family: Courier, 'Courier New', monospace;
+    font-size: 18px;
+    color: white;
+    /* Colour of navbar words */
+    text-decoration: none;
+    box-shadow: none;
+    opacity: 100%;
+    text-align: center;
+    padding: 23px 20px;
+    margin: 3px;
+    display: flex;
+}
+
+.navbar a:hover {
+    color: darkslategray;
+    /* Colour of hovered navbar words */
+    background-color: #c9dfc8;
+    /* BG Colour of hovered navbar */
+    opacity: 100%;
+    margin: 3px;
+}
+
+a.active {
+    text-decoration: underline;
+    color: #301245;
+    /* Colour of active navbar words */
+    background-color: #ccddca;
+    /* BG Colour of active navbar */
+    margin: 3px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, #266b39 0%, #00191f 90%);
+    opacity: 98%;
+    color: lightgray;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-size: smaller;
+}
+
+footer p {
+    margin: 10px 0 0;
+    text-align: justify;
+    font-size: 0.9em;
+    padding-bottom: 0;
+}
+
+.studentEditor,
+.footerMenu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 80px 5px 0;
+    flex-wrap: wrap;
+}
+
+.studentEditor-item,
+.footerMenu-item {
+    list-style: none;
+}
+
+.studentEditor-link {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.studentEditor-link:hover {
+    transform: translateY(-10px);
+}
+
+.footerMenu-link {
+    font-size: 0.8rem;
+    color: #deecdd;
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.5;
+    font-weight: 300;
+}
+
+.footerMenu-link:hover {
+    opacity: 1;
+}
   .gallery {
     max-width: 800px;
     margin: 20px auto;
@@ -97,6 +254,18 @@
 </style>
 </head>
 <body>
+  <nav class="navbar">
+    <img class="logo" src="tree.png">
+    <ul>
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="file:///C:/Users/imras/OneDrive/Documents/Subhan/Web%20and%20design%20devleopment/W2045834_WEB%20AND%20DESIGN/W2045834_GALLERY.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="profile.html">User Profile</a></li>
+        <li><a href="file:///C:/Users/imras/OneDrive/Documents/Subhan/Web%20and%20design%20devleopment/W2045834_WEB%20AND%20DESIGN/W2045834_SITEMAP%201.html">Sitemap</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+    </ul>
+</nav>
 
 <h1>Life on Land</h1>
 
@@ -171,6 +340,23 @@
     <option value="Courier New, monospace">Courier New</option>
   </select>
 </div>
+<footer class="footer">
+  <p>Check out our editor's page:</p>
+  <ul class="studentEditor">
+      <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST1.html">STUDENT 1</a></li>
+      <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST2.html">STUDENT 2</a></li>
+      <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST3.html">STUDENT 3</a></li>
+      <li class="studentEditor-item"><a class="studentEditor-link" href="file:///C:/Users/imras/OneDrive/Documents/Subhan/Web%20and%20design%20devleopment/W2045834_WEB%20AND%20DESIGN/W2045834_PAGE%20EDITOR.html">STUDENT 4</a></li>
+    </ul>
+    <ul class="footerMenu">
+        <li class="footerMenu-item"><a class="footerMenu-link" href="home.html">Home</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="file:///C:/Users/imras/OneDrive/Documents/Subhan/Web%20and%20design%20devleopment/W2045834_WEB%20AND%20DESIGN/W2045834_GALLERY.html">Gallery</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="shop.html">Shop</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="profile.html">User Profile</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="feedback.html">Feedback</a></li>
+        <li class="footerMenu-item"><a class="footerMenu-link" href="team.html">Team</a></li>
+    </ul>
+</footer>
 
 </body>
 </html>

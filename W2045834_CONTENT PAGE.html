@@ -1,11 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life on Land </title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <style>
+        body {
+    margin: 0px;
+    font-family: Courier, 'Courier New', monospace;
+    font-size: 100%;
+    background: linear-gradient(to top, #266b39 0%, #d0e2cf 100%);
+    color: #090f08;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 10%;
+    padding-bottom: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.1875em;
+    padding-top: 10%;
+    padding-bottom: 30px;
+}
+
+p {
+    margin: auto 25%;
+    text-align: justify;
+    font-size: 1.125em;
+    padding-bottom: 10px;
+}
+
+.navbar { /* Header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #cddecc, #2b4929);
+    /* Colour of the navbar */
+    height: 75px;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 65px;
+    height: 65px;
+    margin: 4px 4px 4px 10px;
+}
+
+
+.navbar ul {
+    display: inline-block;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to top, #cddecc, #2b4929);
+    /* Colour of the navbar */
+    opacity: 80%;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    font-family: Courier, 'Courier New', monospace;
+    font-size: 18px;
+    color: white;
+    /* Colour of navbar words */
+    text-decoration: none;
+    box-shadow: none;
+    opacity: 100%;
+    text-align: center;
+    padding: 23px 20px;
+    margin: 3px;
+    display: flex;
+}
+
+.navbar a:hover {
+    color: darkslategray;
+    /* Colour of hovered navbar words */
+    background-color: #c9dfc8;
+    /* BG Colour of hovered navbar */
+    opacity: 100%;
+    margin: 3px;
+}
+
+a.active {
+    text-decoration: underline;
+    color: #301245;
+    /* Colour of active navbar words */
+    background-color: #ccddca;
+    /* BG Colour of active navbar */
+    margin: 3px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, #266b39 0%, #00191f 90%);
+    opacity: 98%;
+    color: lightgray;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-size: smaller;
+}
+
+footer p {
+    margin: 10px 0 0;
+    text-align: justify;
+    font-size: 0.9em;
+    padding-bottom: 0;
+}
+
+.studentEditor,
+.footerMenu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 80px 5px 0;
+    flex-wrap: wrap;
+}
+
+.studentEditor-item,
+.footerMenu-item {
+    list-style: none;
+}
+
+.studentEditor-link {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.studentEditor-link:hover {
+    transform: translateY(-10px);
+}
+
+.footerMenu-link {
+    font-size: 0.8rem;
+    color: #deecdd;
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.5;
+    font-weight: 300;
+}
+
+.footerMenu-link:hover {
+    opacity: 1;
+}
         #go-to-top {
             display: none;
             position: fixed;
@@ -20,83 +190,109 @@
             border: none;
             border-radius: 5px;
         }
-        body {
-            background-color: lightgreen; /* Change background color to green */
-            font-family: Arial, sans-serif; /* Change font */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-        }
-        header {
-            background-color: #4CAF50; /* Dark green header */
-            color: white; /* Text color */
-            padding: 20px; /* Add padding */
-            text-align: center; /* Center align header text */
-        }
-        nav ul {
-            list-style-type: none; /* Remove bullet points */
-            padding: 0;
-            text-align: center; /* Center align nav items */
-        }
-        nav ul li {
-            display: inline; /* Display menu items horizontally */
-            margin-right: 20px; /* Add space between menu items */
-        }
-        main {
-            padding: 20px; /* Add padding */
-            max-width: 800px; /* Limit main content width */
-            margin: auto; /* Center align main content */
-        }
+
         section {
-            margin-bottom: 30px; /* Add space between sections */
+            margin: 0 auto 30px;
+            /* Add space between sections */
         }
-        footer {
-            background-color: #4CAF50; /* Dark green footer */
-            color: white; /* Text color */
-            padding: 10px 20px; /* Add padding */
-            position: fixed; /* Stick to bottom */
-            width: 100%; /* Full width */
-            bottom: 0; /* Stick to bottom */
-            text-align: center; /* Center align footer text */
-        }
-        img {
-            max-width:100%; /* Set maximum width for images */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Prevent inline alignment issues */
-            margin: auto; /* Center align images */
-            width: 300px; /* Set a specific width for images */
+
+        img.content {
+            max-width: 100%;
+            /* Set maximum width for images */
+            height: auto;
+            /* Maintain aspect ratio */
+            display: block;
+            /* Prevent inline alignment issues */
+            margin: auto;
+            /* Center align images */
+            width: 300px;
+            /* Set a specific width for images */
         }
     </style>
 </head>
+
 <body>
     <button id="go-to-top" onclick="scrollToTop()">Go to top</button>
-    <header>
-        <h1>Life on Land</h1>    
-    </header>
-    <main>
+    <nav class="navbar">
+        <img class="logo" src="tree.png">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+        <h1>Life on Land</h1>
         <section id="Goal15">
             <h2>Goal 15</h2>
-            <p>Goal 15 aims to preserve life on land by safeguarding ecosystems, managing forests sustainably, preventing deforestation, and reversing degradation of land in order to prevent biodiversity loss. The Earth's ecosystems are essential for human life, accounting for more than half of global GDP and possessing cultural, spiritual, and economic significance. However, climate change, pollution, and biodiversity loss are serious challenges. Between 2015 and 2019, around 100 million hectares of land were degraded annually, affecting 1.3 billion people. Urgent action is required to solve these issues and ensure sustainable growth.</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Sustainable_Development_Goal_15LifeOnLand.svg" alt="Aerial view of forest">
+            <p>Goal 15 aims to preserve life on land by safeguarding ecosystems, managing forests sustainably,
+                preventing deforestation, and reversing degradation of land in order to prevent biodiversity loss. The
+                Earth's ecosystems are essential for human life, accounting for more than half of global GDP and
+                possessing cultural, spiritual, and economic significance. However, climate change, pollution, and
+                biodiversity loss are serious challenges. Between 2015 and 2019, around 100 million hectares of land
+                were degraded annually, affecting 1.3 billion people. Urgent action is required to solve these issues
+                and ensure sustainable growth.</p>
+            <img class="content" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Sustainable_Development_Goal_15LifeOnLand.svg"
+                alt="Aerial view of forest">
         </section>
         <section id="WhyShouldWeCare">
             <h2>Why Should We Care?</h2>
-            <p>Forests, which cover roughly 31% of the Earth's surface, support more than 80% of land species. Despite its importance, biodiversity is quickly decreasing.</p>
-            <p>Around one fifth of the world's land surface is degraded, which is roughly the size of India and the Russian Federation combined. Degradation of land not only causes species extinction but also accelerates climate change. However, biodiversity and the ecological services it provides can form the basis for climate change adaptation and disaster risk reduction efforts, thereby increasing the resilience of humans.</p>
-            <img src="https://i0.wp.com/www.wates.co.uk/wp-content/uploads/2019/11/wates-guiding-framework-we-care.jpg?fit=804%2C453&ssl=1" alt="Tropical rainforest">
+            <p>Forests, which cover roughly 31% of the Earth's surface, support more than 80% of land species. Despite
+                its importance, biodiversity is quickly decreasing.</p>
+            <p>Around one fifth of the world's land surface is degraded, which is roughly the size of India and the
+                Russian Federation combined. Degradation of land not only causes species extinction but also accelerates
+                climate change. However, biodiversity and the ecological services it provides can form the basis for
+                climate change adaptation and disaster risk reduction efforts, thereby increasing the resilience of
+                humans.</p>
+            <img class="content" src="https://i0.wp.com/www.wates.co.uk/wp-content/uploads/2019/11/wates-guiding-framework-we-care.jpg?fit=804%2C453&ssl=1"
+                alt="Tropical rainforest">
         </section>
         <section id="WhatDoesLossofForestMean">
             <h2>What does loss of forest mean?</h2>
-            <p>The decreasing number of trees leads to the loss of farming income, increased carbon emissions, decreased biodiversity, and degradation of land. Despite ongoing forest loss, data from 2020 show that the share of forests in protected areas and long-term management plans has increased or stayed stable worldwide and in most regions.</p>
-            <p>The actions of humans has a permanent impact on the environment, causing species extinction, disturbing natural balance, and reducing ecosystem resilience. A recent United Nations biodiversity study emphasizes a grim scenario, with around 1 million animal and plant species risking extinction, many within decades, constituting an unprecedented threat in human history.</p>
-            <img src="https://opb-opb-prod.cdn.arcpublishing.com/resizer/v2/T57D4QIA6AP63EPEQPLFGRUN4U.jpg?auth=8b53d27168affd419bd4932ec497de9e708d4da2f243f15c9957bb3ef3fcdb09&width=767" alt="Cross-section of forest">
-            <h3>How does it affect others?</h3>
-            <p>An increasing need for animal protein, increased and unsustainable farming techniques, increased wildlife exploitation, and the climate crisis are all leading to the spread of infectious diseases like COVID-19, which are transmitted from wildlife to humans.</p>
-            <p>Neglected infectious diseases kill around two million people each year, primarily in low- and middle-income countries. These epidemics also cause severe disease, mortality, and productivity decreases among animal populations in poor nations, perpetuating extreme poverty for hundreds of millions of small-scale farmers.</p>
-            <img src="https://pbs.twimg.com/media/EBsWt38WsAc8gpp?format=jpg&name=medium" alt="  disease">
+            <p>The decreasing number of trees leads to the loss of farming income, increased carbon emissions, decreased
+                biodiversity, and degradation of land. Despite ongoing forest loss, data from 2020 show that the share
+                of forests in protected areas and long-term management plans has increased or stayed stable worldwide
+                and in most regions.</p>
+            <p>The actions of humans has a permanent impact on the environment, causing species extinction, disturbing
+                natural balance, and reducing ecosystem resilience. A recent United Nations biodiversity study
+                emphasizes a grim scenario, with around 1 million animal and plant species risking extinction, many
+                within decades, constituting an unprecedented threat in human history.</p>
+            <img class="content" src="https://opb-opb-prod.cdn.arcpublishing.com/resizer/v2/T57D4QIA6AP63EPEQPLFGRUN4U.jpg?auth=8b53d27168affd419bd4932ec497de9e708d4da2f243f15c9957bb3ef3fcdb09&width=767"
+                alt="Cross-section of forest">
+            <h2>How does it affect others?</h2>
+            <p>An increasing need for animal protein, increased and unsustainable farming techniques, increased wildlife
+                exploitation, and the climate crisis are all leading to the spread of infectious diseases like COVID-19,
+                which are transmitted from wildlife to humans.</p>
+            <p>Neglected infectious diseases kill around two million people each year, primarily in low- and
+                middle-income countries. These epidemics also cause severe disease, mortality, and productivity
+                decreases among animal populations in poor nations, perpetuating extreme poverty for hundreds of
+                millions of small-scale farmers.</p>
+            <img class="content" src="https://pbs.twimg.com/media/EBsWt38WsAc8gpp?format=jpg&name=medium" alt="  disease">
         </section>
-    </main>
-    <footer>
-        <p>Explore more about Goal 15 by clickng this link <a href="https://www.un.org/sustainabledevelopment/goal15/" target="_blank">UN.org</a></p>
+    </body>
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+        <p>Check out our editor's page:</p>
+        <ul class="studentEditor">
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST1.html">STUDENT 1</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST2.html">STUDENT 2</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="pageEditor_ST3.html">STUDENT 3</a></li>
+            <li class="studentEditor-item"><a class="studentEditor-link" href="file:///C:/Users/imras/OneDrive/Documents/Subhan/Web%20and%20design%20devleopment/W2045834_WEB%20AND%20DESIGN/W2045834_PAGE%20EDITOR.html">STUDENT 4</a></li>
+        </ul>
+        <ul class="footerMenu">
+            <li class="footerMenu-item"><a class="footerMenu-link" href="home.html">Home</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="file:///C:/Users/imras/OneDrive/Documents/Subhan/Web%20and%20design%20devleopment/W2045834_WEB%20AND%20DESIGN/W2045834_GALLERY.html">Gallery</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="shop.html">Shop</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="profile.html">User Profile</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="feedback.html">Feedback</a></li>
+            <li class="footerMenu-item"><a class="footerMenu-link" href="team.html">Team</a></li>
+        </ul>
     </footer>
 </body>
-</html>
+
+</html
